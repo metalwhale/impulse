@@ -1,0 +1,11 @@
+services:
+  impulse-ai:
+    build:
+      context: ../impulse-ai/
+      dockerfile: Dockerfile.local
+    environment:
+      - IMPULSE_LOG_LEVEL=info
+    volumes:
+      - ../:/usr/local/src/impulse/
+    tty: true
+    working_dir: /usr/local/src/impulse/impulse-ai/
